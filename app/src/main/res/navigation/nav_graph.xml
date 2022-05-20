@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ArtistFragment">
+
+    <fragment
+        android:id="@+id/ArtistFragment"
+        android:name="fr.mjtchoupe.deezer.ArtistFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_artist">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="fr.mjtchoupe.deezer.AlbumFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_SecondFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/ArtistFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="fr.mjtchoupe.deezer.TrackFragment"
+        android:label="Tracks"
+        tools:layout="@layout/fragment_third">
+
+        <action
+            android:id="@+id/action_ThirdFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+
+
+    </fragment>
+
+</navigation>

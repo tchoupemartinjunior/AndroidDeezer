@@ -1,0 +1,1 @@
+convertir les classes en object afin dacceder a leurs méthodes
